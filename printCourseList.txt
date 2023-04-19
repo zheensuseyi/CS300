@@ -1,0 +1,13 @@
+// Function to print out a list of courses in alphanumeric order
+void printCourseList(vector <Course> courses) {
+
+   // Sort courses by courseNumber in alphanumeric order    
+   sort(courses.begin(), courses.end(), [](const Course& a, const Course& b) {
+   return a.courseNumber < b.courseNumber;
+   });
+
+   // Print course list
+   for (const auto& course : courses) {
+       cout << course.courseNumber << " " << course.courseTitle << endl;
+       }
+   }
